@@ -19,11 +19,11 @@ from django.contrib import admin
 from eureka import views
 
 urlpatterns = [
-    url(r'^0309526', include(admin.site.urls)),
+    url(r'^0309526/', include(admin.site.urls)),
     url(r'^$', views.index),
-    url(r'^index$', views.welcome, name='welcome'),
-    url(r'^about$', views.showAboutPage, name='aboutpage'),
-    url(r'^howitworks$', views.showHowWorks, name='howpage'),
-    url(r'^explore$', views.showExplore, name='explore'),
-    url(r'^start$', views.startProject, name='startproj'),
+    url(r'^index/$', views.welcome, name='welcome'),
+    url(r'^about/$', views.showAboutPage, name='aboutpage'),
+    url(r'^howitworks/$', views.showHowWorks, name='howpage'),
+    url(r'^explore/$', views.showExplore, name='explore'),
+    url(r'^start/$', views.startProject, name='startproj'),
 ]
