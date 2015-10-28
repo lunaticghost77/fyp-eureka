@@ -1,142 +1,130 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="shortcut icon" href="assets/ico/favicon.png">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="shortcut icon" href="{% static 'assets/ico/favicon.png' %}">
 
-    <title>Eureka - crowdfunding platform</title>
+        <title>Eureka</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="assets/css/bootstrap.css" rel="stylesheet">
+        <!-- Bootstrap core CSS -->
+        <link href="{% static 'assets/css/bootstrap.css' %}" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
-	<link href="assets/css/normalize.css"rel="stylesheet" >
-	<link href="assets/css/style.css" rel="stylesheet">
-    <link href="assets/css/main.css" rel="stylesheet">
-	<link href="assets/css/font-awesome.min.css" rel="stylesheet">
-	
-    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
+        <!-- Custom styles for this template -->
+        <link href="{% static 'assets/css/normalize.css' %}"rel="stylesheet" >
+        <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+        <link href="{% static 'assets/css/main.css' %}" rel="stylesheet">
+        <link href="{% static 'assets/css/font-awesome.min.css' %}" rel="stylesheet">
 
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
-    <style> <!--for temporary testing -->
-	textarea.title {
-    resize.none;
-	}
-	</style>
-    <script src="assets/js/modernizr.custom.js"></script>
-    
-  </head>
+        <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
 
-  <body>
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+        <style> <!--for temporary testing -->
+            textarea.title {
+                resize.none;
+            }
+        </style>
+        <script src="{% static 'assets/js/modernizr.custom.js' %}"></script>
+    </head>
 
-	<!-- Menu -->
-	<nav class="menu" id="theMenu">
-		<div class="menu-wrap">
-			<h1 class="logo"><a href="index.html#home">EUREKA</a></h1>
-			<a href="index.html">Home</a>
-			<a href="howitworks.html">How it works</a>
-			<a href="explore.html">Explore</a>
-			<a href="about.html">About</a>
-			<a href="#contact">Contact</a>
-			<a href="#"><i class="fa fa-facebook"></i></a>
-			<a href="#"><i class="fa fa-twitter"></i></a>
-			<a href="#"><i class="fa fa-dribbble"></i></a>
-			<a href="#"><i class="fa fa-envelope"></i></a>
-		</div>
-		
-		<!-- Menu button -->
-		<div id="menuToggle"><i class="fa fa-bars"></i></div>
-	</nav>
-	
-	
+    <body>
+        <!-- Menu -->
+        <nav class="menu" id="theMenu">
+            <div class="menu-wrap">
+                <h1 class="logo"><a href="index#home">EUREKA</a></h1>
+                <a href="index">Home</a>
+                <a href="howitworks">How it works</a>
+                <a href="explore">Explore</a>
+                <a href="about">About</a>
+                <a href="#contact">Contact</a>
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-dribbble"></i></a>
+                <a href="#"><i class="fa fa-envelope"></i></a>
+            </div>
+            <!-- Menu button -->
+            <div id="menuToggle"><i class="fa fa-bars"></i></div>
+        </nav>
 
-	 <form action="index.html" method="post">
-      
-        <h1>Get Started</h1>
-        
-        <fieldset>
-          <legend><span class="number">1</span>Personal info</legend>
-          <label for="name">Project Name:</label>
-          <input type="text" id="name" name="project_name">
-          
-          <label for="mail">Email:</label>
-          <input type="email" id="mail" name="user_email">
-          
-          <label for="contact">Contact number:</label>
-          <input type="text" id="contact" name="contact_number">
-          
-          <label>It's gonna be:</label>
-          <input type="radio" id="solo" value="solo" name="user_num"><label for="solo" class="light">Solo work</label><br>
-          <input type="radio" id="group" value="group" name="user_num"><label for="group" class="light">Group work</label>
-        </fieldset>
-        
-        <fieldset>
-          <legend><span class="number">2</span>Project info</legend>
-          <label for="bio">Describe ur project:</label>
-          <textarea id="bio" name="user_bio"></textarea>
-        </fieldset>
-		
-		<fieldset>
-		<label>Upload pictures for your project:<br><input type="file" name="datafile" size="40"></label>
-		</fieldset>
-		
-        <fieldset>
-        <label for="job">Course: </label>
-        <select id="job" name="user_job">
-          
-            <option value="frontend_developer">Design</option>
-            <option value="php_developor">Architecture & Quantity Surveying</option>
-            <option value="python_developer">Business</option>
-            <option value="rails_developer"> Computing & IT</option>
-            <option value="web_designer">Communication</option>
-            <option value="WordPress_developer">Education</option>
-			<option value="Android_developer">Engineering</option>
-			<option value="Android_developer">Hospitality, Tourism & Culinary Arts</option>
-            <option value="Android_developer">Languages</option>
-            <option value="iOS_developer">Law</option>
-            <option value="mobile_designer">Pharmacy</option>  
-            <option value="business_owner">Medicine</option>
-            <option value="freelancer">Postgraduate</option>
-       
-        </select>
-        
-          <label>Interests:</label>
-          <input type="checkbox" id="supervisor" value="supervisor" name="supervisor"><label class="light" for="supervisor">Supervisor</label><br>
-            <input type="checkbox" id="sponsor" value="sponsor" name="sponsor"><label class="light" for="sponsor">Sponsor</label><br>
-          <input type="checkbox" id="team_member" value="team_member" name="team_member"><label class="light" for="team_member">Team member</label>
-        
-        </fieldset>
-        <button type="submit">Submit</button>
-      </form>
-	
-	
+        <form action="index.html" method="post">
+            <h1>Get Started</h1>
+            <fieldset>
+                <legend><span class="number">1</span>Personal info</legend>
+                <label for="name">Project Name:</label>
+                <input type="text" id="name" name="project_name">
 
+                <label for="mail">Email:</label>
+                <input type="email" id="mail" name="user_email">
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/main.js"></script>
-	<script src="assets/js/masonry.pkgd.min.js"></script>
-	<script src="assets/js/imagesloaded.js"></script>
-    <script src="assets/js/classie.js"></script>
-	<script src="assets/js/AnimOnScroll.js"></script>
-	<script>
-		new AnimOnScroll( document.getElementById( 'process' ), {
-			minDuration : 0.4,
-			maxDuration : 0.7,
-			viewportFactor : 0.2
-		} );
-	</script>
-  </body>
+                <label for="contact">Contact number:</label>
+                <input type="text" id="contact" name="contact_number">
+
+                <label>It's gonna be:</label>
+                <input type="radio" id="solo" value="solo" name="user_num"><label for="solo" class="light">Solo work</label><br>
+                <input type="radio" id="group" value="group" name="user_num"><label for="group" class="light">Group work</label>
+            </fieldset>
+
+            <fieldset>
+                <legend><span class="number">2</span>Project info</legend>
+                <label for="bio">Describe your project:</label>
+                <textarea id="bio" name="user_bio"></textarea>
+            </fieldset>
+
+            <fieldset>
+                <label>Upload pictures for your project:<br><input type="file" name="datafile" size="40"></label>
+            </fieldset>
+
+            <fieldset>
+                <label for="job">Course: </label>
+                <select id="job" name="user_job">
+                    <option value="frontend_developer">Design</option>
+                    <option value="php_developor">Architecture & Quantity Surveying</option>
+                    <option value="python_developer">Business</option>
+                    <option value="rails_developer"> Computing & IT</option>
+                    <option value="web_designer">Communication</option>
+                    <option value="WordPress_developer">Education</option>
+                    <option value="Android_developer">Engineering</option>
+                    <option value="Android_developer">Hospitality, Tourism & Culinary Arts</option>
+                    <option value="Android_developer">Languages</option>
+                    <option value="iOS_developer">Law</option>
+                    <option value="mobile_designer">Pharmacy</option>
+                    <option value="business_owner">Medicine</option>
+                    <option value="freelancer">Postgraduate</option>
+                </select>
+
+                <label>Interests:</label>
+                <input type="checkbox" id="supervisor" value="supervisor" name="supervisor"><label class="light" for="supervisor">Supervisor</label><br>
+                <input type="checkbox" id="sponsor" value="sponsor" name="sponsor"><label class="light" for="sponsor">Sponsor</label><br>
+                <input type="checkbox" id="team_member" value="team_member" name="team_member"><label class="light" for="team_member">Team member</label>
+            </fieldset>
+            <button type="submit">Submit</button>
+        </form>
+
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'assets/js/main.js' %}"></script>
+        <script src="{% static 'assets/js/masonry.pkgd.min.js' %}"></script>
+        <script src="{% static 'assets/js/imagesloaded.js' %}"></script>
+        <script src="{% static 'assets/js/classie.js' %}"></script>
+        <script src="{% static 'assets/js/AnimOnScroll.js' %}"></script>
+        <script>
+            new AnimOnScroll( document.getElementById( 'process' ), {
+                minDuration : 0.4,
+                maxDuration : 0.7,
+                viewportFactor : 0.2
+            } );
+        </script>
+    </body>
 </html>
